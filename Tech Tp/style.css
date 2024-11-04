@@ -1,0 +1,214 @@
+/* Estilos globales */
+body {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    background-color: #5ba35b; /* Fondo verde claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #dcdcdc; /* Gris claro para el encabezado */
+    padding: 20px 0;
+}
+
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre el logo y el texto */
+}
+
+.logo {
+    width: 150px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción */
+}
+
+.titulo-lema h1 {
+    margin: 0;
+    font-size: 2.5rem; /* Tamaño del título */
+    color: #128a48;
+}
+
+.titulo-lema h2 {
+    margin: 0;
+    font-size: 1.5rem; /* Tamaño del lema */
+    color: #468b52;
+}
+
+/* Estilo para el menú de navegación */
+nav ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    display: flex; /* Hace que los elementos se alineen en una fila */
+    justify-content: center; /* Centra el menú horizontalmente */
+    padding: 0;
+    margin: 20px 0 0 0; /* Espacio encima del menú */
+}
+
+nav ul li {
+    margin: 0 15px; /* Espacio entre los elementos del menú */
+}
+
+nav ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #000; /* Cambia el color de los enlaces a negro o el color que prefieras */
+    font-weight: bold;
+}
+
+/* Estilos para el cuerpo principal */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+main p {
+    font-size: 1.2em;
+}
+
+/* Banner */
+.banner {
+    background-image: url('imágenes/Imagen viaje.jpg'); /* Ruta de la imagen */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Estilos generales para las secciones */
+section {
+    margin: 20px;
+    padding: 15px;
+    border: 2px solid #000; /* Borde sólido negro */
+    background-color: #f0f0f0; /* Color de fondo gris claro */
+}
+
+/* Estilos para la sección de productos */
+.productos {
+    display: flex;             /* Activa Flexbox */
+    flex-wrap: wrap;           /* Permite que los productos se envuelvan en varias filas */
+    justify-content: space-between; /* Espacio entre productos */
+    padding: 20px;             /* Relleno interno del contenedor */
+}
+
+.producto {
+    background-color: #2196F3; /* Fondo azul */
+    color: white;              /* Color del texto */
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 200px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Estilos para la sección de reseñas */
+.reseñas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilos para la sección de contacto */
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contacto h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contacto form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contacto label {
+    font-weight: bold;
+    color: #555;
+}
+
+#contacto input[type="text"],
+#contacto input[type="email"],
+#contacto textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+#contacto input[type="text"]:focus,
+#contacto input[type="email"]:focus,
+#contacto textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#contacto button {
+    padding: 12px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contacto button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el pie de página */
+footer {
+    text-align: center;
+    background-color: #dcdcdc;
+    color: #000;
+    padding: 10px;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .reseñas {
+        grid-template-columns: 1fr; /* Las cards de reseñas se apilan */
+    }
+
+    .contacto form {
+        padding: 10px;
+    }
+
+    .contacto input,
+    .contacto textarea,
+    .contacto button {
+        width: 100%;
+        padding: 10px;
+    }
+}
